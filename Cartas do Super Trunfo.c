@@ -135,4 +135,29 @@ int main() {
 
         case 5:
             printf("Densidade Demográfica (quanto menor, melhor):\n");
-            printf("%s: %.2f h
+            printf("%s: %.2f hab/km² | %s: %.2f hab/km²\n", cidade1, densidade1, cidade2, densidade2);
+            if (densidade1 < densidade2)
+                printf("Resultado: %s venceu!\n", cidade1);
+            else if (densidade2 < densidade1)
+                printf("Resultado: %s venceu!\n", cidade2);
+            else
+                printf("Resultado: Empate!\n");
+            break;
+
+        case 6:
+            printf("PIB per Capita:\n");
+            printf("%s: %.2f | %s: %.2f\n", cidade1, pibPerCapita1, cidade2, pibPerCapita2);
+            if (pibPerCapita1 > pibPerCapita2)
+                printf("Resultado: %s venceu!\n", cidade1);
+            else if (pibPerCapita2 > pibPerCapita1)
+                printf("Resultado: %s venceu!\n", cidade2);
+            else
+                printf("Resultado: Empate!\n");
+            break;
+
+        default:
+            printf("Opção inválida. Escolha um número de 1 a 6.\n");
+    }
+
+    return 0;
+}
